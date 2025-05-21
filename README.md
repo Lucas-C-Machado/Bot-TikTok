@@ -1,51 +1,33 @@
 # Bot-TikTok
 
-Este projeto é um **bot automatizado para interação com o site do TikTok**, escrito em Python. Ele simula ações humanas para logar automaticamente em uma conta TikTok utilizando a biblioteca `pyautogui`, que permite controle do mouse e teclado.
+This project is an **automated bot for interacting with the TikTok website**, written in Python. It simulates human actions to automatically log into a TikTok account using the `pyautogui` library, which allows mouse and keyboard control.
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
-- `app.py`: Script principal. Abre o navegador, acessa o TikTok, e realiza login automatizado simulando cliques e digitação.
-- `mouse-tracker.py`: Ferramenta auxiliar para identificar as coordenadas do mouse na tela, útil para configurar as ações do `pyautogui`.
-- `curtida.png`: Um recurso visual usado pelo bot (Uusado para reconhecimento de imagem).
-- `README.md`: Este arquivo de documentação.
+- `app.py`: Main script. Opens the browser, accesses TikTok, and performs automated login by simulating clicks and typing.
+- `mouse-tracker.py`: Auxiliary tool to identify mouse coordinates on the screen, useful to configure `pyautogui` actions.
+- `curtida.png`: A visual asset used by the bot (used for image recognition).
+- `README.md`: This documentation file.
 
-## ⚙️ Como Funciona
+## ⚙️ How It Works
 
-1. O script `app.py` abre o navegador e acessa o site do TikTok.
-2. Usa `pyautogui` para:
-   - Clicar em posições específicas da tela (como o botão de login).
-   - Digitar o e-mail e senha de login.
-   - Finalizar o login e aguardar o carregamento da página.
+1. The `app.py` script opens the browser and navigates to the TikTok site.
+2. Uses `pyautogui` to:
+   - Click on specific screen positions (such as the login button).
+   - Type the login email and password.
+   - Complete the login and wait for the page to load.
 
-**Importante:** As posições dos cliques (`pyautogui.click(x, y)`) são fixas. Isso significa que o script foi feito para um layout de tela/resolução específicos. É recomendado rodar o `mouse-tracker.py` para ajustar as coordenadas ao seu monitor.
+**Important:** The click positions (`pyautogui.click(x, y)`) are fixed. This means the script was made for a specific screen layout/resolution. It is recommended to run `mouse-tracker.py` to adjust coordinates to your monitor.
 
-## 🛠️ Requisitos
+## 🛠️ Requirements
 
 - Python 3.11+
-- Bibliotecas:
+- Libraries:
   - `pyautogui`
   - `webbrowser`
-  - `time` (nativa)
+  - `time` (built-in)
 
-Instalação das dependências:
+Install dependencies with:
 
 ```bash
 pip install pyautogui
-```
-
----
-
-## 🚨 **Avisos Importantes**  
-
-- Este projeto é **apenas para fins educacionais**.  
-
-- Automatizar interações em plataformas como o TikTok pode violar os termos de uso da plataforma. Use com responsabilidade e por sua conta e risco.  
-
-- As credenciais estão atualmente hardcoded no código (`app.py`). **Remova-as antes de versionar ou compartilhar o projeto.**
-
----
-
-## 📌 **Sugestões Futuras**  
-
-- Tornar as coordenadas dinâmicas ou responsivas.  
-- Adicionar interface gráfica para configuração.
